@@ -1,0 +1,32 @@
+Team ID = 1151
+Trained weights drive link = https://drive.google.com/file/d/10rPj4RqJjIu4h8M2N4GUpDDQXIZWuNcD/view?usp=drive_link
+
+###############################################################################
+'''
+Please write the complete steps taken by your team explaining how you completed Task 2B. It is adviced to be as elaborate as possible.
+
+1. Lets start from start. First we read carefully the tasks problem statemet along with the detailed requirements so that we can start in the right direction.
+
+2. After we were confident enough to understand the requirements, we started with our research to find the way to solve.
+
+3. We read about Computer Vision in detail and read about the models, augmentation, learning rate, softmax, crossentropy, neural networks, pytorch and everything related.
+
+4. We came to a conclusion to go with Resnet18 model since we read in a research paper that with smaller number of images, Resnet50 or large models might overfit.
+
+5. Next was to collect data. We collected some extra images from the internet. We ran pre processing like auto orientation, fixing to a size and augmentation like fliiping, noise increment, cutouts, rotation and others. This gave us around 2700 images. Split them into train, test and validation.
+
+6. Next was to search for GPU access. We thought of Colab but it had limited access, so we moved to kaggle which gave around 100 hours of usage.
+
+7. We started with the code. We imported all the required libraries. We found the standard deviation and mean to normalize the input.
+
+8. Then started with the training of the model. We tried with smaller epochs to just check if everything is right or not. Then we trained the network for 100 epochs with early stopping being turned on. 
+
+9. The hyperparameters were set in. We set the device as cuda. There were 5 classes as specified. We used crossentropy function for loss. Stochastic Gradient Descent was used for Gradient Descent with learning rate of 0.01, momentum being 0.9.
+
+10. This was the result for the 100th epoch - Epoch number 100
+ - Training dataset. Got 2454 out of 2484 images correctly (98.792%). loss: 0.037
+ - Testing dataset. Got 225 out of 236 images correctly (95.339%)
+
+11. But the best weights were saved. We loaded the weights to run inference on found it good to go.
+
+12. We finalised and submitted it as said in the themebook.
